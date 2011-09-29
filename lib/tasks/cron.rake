@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 desc "This task is called by the Heroku cron add-on"
 task :cron => :environment do
-  if Time.now.min % 2 == 0 # run every four hours
+  #if Time.now.min % 2 == 0 # run every four hours
   links= Hash.new
   title= Hash.new
   i=0
@@ -63,7 +63,7 @@ task :cron => :environment do
     puts leks[0]
     
    puts "Good morning sir"
-  end
+  #end
 
  
 end
