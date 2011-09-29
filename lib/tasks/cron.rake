@@ -50,7 +50,8 @@ task :cron => :environment do
           end
 
           doc.span.bold {
-            doc.text Time.now
+            doc.text Time.now.min
+            doc.text "hello"
           }
         }
       }
