@@ -35,7 +35,7 @@ p=0
 p=10
 
 builder = Nokogiri::HTML::Builder.new do |doc|
-    doc.html {
+    
       doc.body(:onload => 'some_func();') {
        
         (title.size-10).times	 do 
@@ -49,12 +49,13 @@ builder = Nokogiri::HTML::Builder.new do |doc|
         end
         
         doc.span.bold {
-          doc.text "pork chop"
+          doc.text Time.now
+          doc.text "yahoo"
         }
       }
-    }
+    
   end
  # puts builder.to_html
-  File.open("public/index.html", 'w') {|f| f.write(builder.to_html) }
+  File.open("app/views/pages/home.html.erb", 'w') {|f| f.write(builder.to_html) }
 
 

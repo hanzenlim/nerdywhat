@@ -57,7 +57,7 @@ task :cron => :environment do
       }
     end
    # puts builder.to_html
-    File.open("public/index.html", 'w') {|f| f.write(builder.to_html) }
+    File.open("app/views/pages/home.html.erb", 'w') {|f| f.write(builder.to_html) }
     leks= Hash.new
     
     leks=[1,2]
