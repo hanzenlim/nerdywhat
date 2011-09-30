@@ -4,7 +4,7 @@ desc "This task is called by the Heroku cron add-on"
 task :cron => :environment do
  
    puts "hello"
-   User.sayHello
+   Child.sayHello
    
    
 end
