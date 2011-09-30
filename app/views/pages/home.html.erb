@@ -4,14 +4,11 @@
 <p><%= @science%></p>
 <a href="http://www.google.com">hello</a>
 
-
-<% size=@title.size %>
-<% i=0 %>
-<% @title.each do |y| %>
-
-<p><a href="<%= y.link %>"><%=y.id%> :: <%= y.name %></a></p>
-
-<% i=i+1 %>
+<% size=@title.size%>
+<% for i in (10..size-1)%>
+<p><a href="<%= @title[i].link %>"><%= @title[i].id%> :: <%= @title[i].name %></a></p>	
 <% end %>
+
+
 
 
