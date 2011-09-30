@@ -1,2 +1,17 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<p>Hello</p>
+<p><%= @science%></p>
+<a href="http://www.google.com">hello</a>
+
+
+<% size=@title.size %>
+<% i=0 %>
+<% @title.each do |y| %>
+
+<p><a href="<%= y.link %>"><%= y.name %></a></p>
+
+<% i=i+1 %>
+<% end %>
+
+

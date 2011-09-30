@@ -56,6 +56,6 @@ builder = Nokogiri::HTML::Builder.new do |doc|
     
   end
  # puts builder.to_html
-  File.open("app/views/pages/home.html.erb", 'w') {|f| f.write(builder.to_html) }
+  File.open("public/index.html", 'w') {|f| f.write(builder.to_html) }
 
 
