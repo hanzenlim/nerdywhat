@@ -21,8 +21,10 @@ class User < ActiveRecord::Base
       #puts node.text
       if(User.exists?(i+1))
          user=User.find(i+1)
-         user.link=node.text
-         user.save
+         if(node.text.size < 255)
+           user.link=node.text
+         end
+           user.save
       else
          user=User.new(:link =>node.text)
          user.save
