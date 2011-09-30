@@ -1,0 +1,8 @@
+ul li{
+	list-style: none;
+    line-height: 1.7em;
+    margin: .25em 0;
+    padding: 0 0 0 15px;
+    color: red;
+    font-size: 15px;
+}

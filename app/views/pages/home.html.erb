@@ -3,12 +3,46 @@
 <p>Hello</p>
 <p><%= @science%></p>
 <a href="http://www.google.com">hello</a>
+<style type="test/css">
+ul li{
+	list-style: none;
+    line-height: 2em;
+    margin: .25em 0;
+    padding: 0 0 0 15px;
+    color: red;
+}
 
-<% size=@title.all.size%>
-<% for i in (11..size)%>
-<p><a href="<%= @title.find(i).link %>"><%= @title.find(i).id%> :: <%= @title.find(i).name %></a></p>	
-<% end %>
+p
+{
+	
+color: orange;
+}
 
+</style>
+<p>sdfsdfsdf</p>
+<div class="container_12">
+	<div class="grid_6">
+	<ul>
+	 <% size=@hacker.all.size%>
+	 <% for i in (1..size)%>
+	 <li>
+	 <a href="<%= @title.find(i).link %>"><%= @title.find(i).id%> :: <%= @title.find(i).name  %></a>	
+	 </li>
+	 <% end %>
+	</ul>
+	</div>
+	
+	<div class="grid_6">
+	<ul>
+	<% size=@hacker.all.size%>
+	<% for i in (1..size)%>
+	  <li>
+	  <a href="<%= @hacker.find(i).link %>"><%= @hacker.find(i).id%> :: <%= @hacker.find(i).name  %></a>
+	  </li>	
+	<% end %>
+	</ul>		
+	</div>
+</div>
 
 
 

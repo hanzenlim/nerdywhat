@@ -5,6 +5,7 @@ task :cron => :environment do
  
    puts "hello"
    Child.sayHello
+   HackerNew.generateHackerNews
    
    
 end

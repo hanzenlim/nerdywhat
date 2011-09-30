@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     
    # User.sayHello
     @title=Child
+    @hacker=HackerNew
   end   
 
     
@@ -14,6 +15,10 @@ class PagesController < ApplicationController
   def bading
     first=User.new(:name =>"Michael Hartly", :link=>"www.goddddgole.com")
     
+    
+  end
+  
+  def about
     
   end
   
