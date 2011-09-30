@@ -6,7 +6,7 @@ class PagesController < ApplicationController
  
     
    # User.sayHello
-    @title=Child.all
+    @title=Child
   end   
 
     

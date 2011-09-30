@@ -4,9 +4,9 @@
 <p><%= @science%></p>
 <a href="http://www.google.com">hello</a>
 
-<% size=@title.size%>
-<% for i in (10..size-1)%>
-<p><a href="<%= @title[i].link %>"><%= @title[i].id%> :: <%= @title[i].name %></a></p>	
+<% size=@title.all.size%>
+<% for i in (11..size)%>
+<p><a href="<%= @title.find(i).link %>"><%= @title.find(i).id%> :: <%= @title.find(i).name %></a></p>	
 <% end %>
 
 
