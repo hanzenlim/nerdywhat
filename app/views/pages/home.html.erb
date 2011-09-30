@@ -8,9 +8,9 @@
 <% size=@title.size %>
 <% i=0 %>
 <% @title.each do |y| %>
-
+<% if i>9 %>
 <p><a href="<%= y.link %>"><%= y.name %></a></p>
-
+<% end %>
 <% i=i+1 %>
 <% end %>
 
