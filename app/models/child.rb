@@ -8,10 +8,12 @@ class Child < ActiveRecord::Base
       #puts node.text
       if(Child.exists?(i+1))
          user=Child.find(i+1)
-         if(node.text.size < 255)
+         if(node.text.size < 255 && node.text =~ /http:/)
            user.link=node.text
+         else
+           user.link="http://www.reddit.com" + node.text
          end
-           user.save
+         user.save
       else
          user=Child.new(:link =>node.text)
          user.save
