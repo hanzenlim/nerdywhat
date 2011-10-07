@@ -7,11 +7,15 @@ ul li{
     font-size: 15px;
 }
 
+h3
+{
+color: #a20640;
 
+}
 a:link {text-decoration: none}
 a:visited {color: #777772;}
 
 a:hover   {color:red;}
 a:active  {color:yellow;}
 
-li:before{ content: '✔';} 
+//li:before{ content: '✔';} 
