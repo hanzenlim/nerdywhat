@@ -1,8 +1,17 @@
 ul li{
 	list-style: none;
-    line-height: 1.7em;
+    line-height: 1.2em;
     margin: .25em 0;
     padding: 0 0 0 15px;
-    color: red;
+    color: #FF6666;
     font-size: 15px;
 }
+
+
+a:link {text-decoration: none}
+a:visited {color: #777772;}
+
+a:hover   {color:red;}
+a:active  {color:yellow;}
+
+li:before{ content: '✔';} 
