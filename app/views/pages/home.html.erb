@@ -1,29 +1,116 @@
-<h1 id="logo" align="center">got nerd</h1>
+<!-- for alternate background of link -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('#myList li:nth-child(odd)').addClass('alternate'); 
+});
 
-<div class="container_12">
-	<div class="grid_6"> 
+
+</script>
+
+	<div id="header">
+		<div id="logo">
+		whats nerdy
+		</div>
+	<a href="#top">top_page | </a><a href="#reddit">reddit | </a><a href="#reddit_pics">reddit/pics | </a><a href="#hackernews">hacker news | </a>
+	</div>
+<br/>
+
+
+
+
+<div class="layout-978">
+	
+	<div class="row">
+		<div class="col6">
+		<a name="hackernews" />
+		<br/>
+		<ul>
+			<h3 id="h3">Hacker News</a></h3>
+		 <% size=@hacker.all.size%>
+		 <% for i in (1..16)%>
+		 <li>
+		 <a href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>	
+		 </li>
+		 <% end %>
+		</ul>
+		</div>
+
+		<div class="col6">
+		<br/><br/><br/>
+		<ul>
+	    <h3></h3>
+		<% size=@hacker.all.size%>
+		<% for i in (17..size-1)%>
+		  <li>
+		  <a class="links" href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>
+		  </li>	
+		<% end %>
+		</ul>		
+		</div>
+	<div class="row-end">&nbsp;</div>
+	</div>		
+	
+	
+<!-- another new section -->	
+<div class="row">
+	<div class="col6">
+	<a name="reddit" />
+	<br/>
 	<ul>
-		<h3>REDDIT</h3>
-	 <% size=@hacker.all.size%>
-	 <% for i in (11..size)%>
+		<h3 id="h3">reddit</h3>
+	 <% size=@reddit.all.size%>
+	 <% for i in (11..24)%>
 	 <li>
-	 <a href="<%= @title.find(i).link %>"> :: <%= @title.find(i).name  %></a>	
+	 <a href="<%= @reddit.find(i).link %>"> :: <%= @reddit.find(i).name  %></a>	
 	 </li>
 	 <% end %>
 	</ul>
 	</div>
 	
-	<div class="grid_6">
+	<div class="col6">
+	<br/><br/><br/><br/>
 	<ul>
-		<h3>Hacker News</h3>
-	<% size=@hacker.all.size%>
-	<% for i in (1..size)%>
+	<% size=@reddit.all.size%>
+	<% for i in (25..size)%>
 	  <li>
-	  <a href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>
+	  <a href="<%= @reddit.find(i).link %>"> :: <%= @reddit.find(i).name  %></a>
 	  </li>	
 	<% end %>
 	</ul>		
 	</div>
+<div class="row-end">&nbsp;</div>
+</div>
+
+
+<!-- another new section -->
+<div class="row">
+	<div class="col6">
+	<a name="reddit_pics" />
+	<br/>
+	<ul>
+		<h3 id="h3">reddit/pics</a></h3>
+	 <% size=@hackerpic.all.size%>
+	 <% for i in (1..13)%>
+	 <li>
+	 <a href="<%= @hackerpic.find(i).link %>"> :: <%= @hackerpic.find(i).name  %></a>	
+	 </li>
+	 <% end %>
+	</ul>
+	</div>
+	
+	<div class="col6">
+	<br/><br/><br/>
+	<ul>
+    <h3></h3>
+	<% size=@hackerpic.all.size%>
+	<% for i in (14..size)%>
+	  <li>
+	  <a class="links" href="<%= @hackerpic.find(i).link %>"> :: <%= @hackerpic.find(i).name  %></a>
+	  </li>	
+	<% end %>
+	</ul>		
+	</div>
+<div class="row-end">&nbsp;</div>
 </div>
 
 

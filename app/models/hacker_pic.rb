@@ -1,13 +1,13 @@
-class Child < ActiveRecord::Base
-  
-  def self.sayHello
+class HackerPic < ActiveRecord::Base
+ 
+  def self.generateHackerPics
    
     i=0
-    doc = Nokogiri::HTML(open("http://reddit.com"))
+    doc = Nokogiri::HTML(open("http://www.reddit.com/r/pics/"))
     doc.xpath("//div[@class='entry unvoted']/p[@class='title']/a[@class='title ']/@href").each do |node|
       #puts node.text
-      if(Child.exists?(i+1))
-         user=Child.find(i+1)
+      if(HackerPic.exists?(i+1))
+         user=HackerPic.find(i+1)
          if(node.text.size < 255 && node.text =~ /http:/)
            user.link=node.text
          else
@@ -15,7 +15,7 @@ class Child < ActiveRecord::Base
          end
          user.save
       else
-         user=Child.new(:link =>node.text)
+         user=HackerPic.new(:link =>node.text)
          user.save
       end
      
@@ -25,12 +25,12 @@ class Child < ActiveRecord::Base
     i=0
     doc.xpath("//div[@class='entry unvoted']/p[@class='title']/a[@class='title ']").each do |node|
     #puts node.text
-    if(Child.exists?(i+1))
-      user=Child.find(i+1)
+    if(HackerPic.exists?(i+1))
+      user=HackerPic.find(i+1)
       user.name=node.text
       user.save
     else
-      user=Child.new(:name =>node.text)
+      user=HackerPic.new(:name =>node.text)
       user.save
     end
    

@@ -34,8 +34,6 @@ class HackerNew < ActiveRecord::Base
 
        i=i+1
    end
-
-
      # p=0
      #    links.size.times  do 
      #     #puts "#{p} - #{title[p]}"

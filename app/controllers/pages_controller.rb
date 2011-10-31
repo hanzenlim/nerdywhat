@@ -6,8 +6,9 @@ class PagesController < ApplicationController
  
     
    # User.sayHello
-    @title=Child
+    @reddit=Child
     @hacker=HackerNew
+    @hackerpic=HackerPic
   end   
 
     
@@ -19,6 +20,10 @@ class PagesController < ApplicationController
   end
   
   def about
+    
+  end
+  
+  def _left
     
   end
   

@@ -1,6 +1,9 @@
 Yuhu::Application.routes.draw do
-  get "pages/home"
-  get "pages/about"
+ # get "pages/home"
+#  get "pages/about"
+  
+  root :to =>'pages#home'
+  #get "pages/_left"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
