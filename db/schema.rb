@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(:version => 20111023071838) do
 
   create_table "children", :force => true do |t|
-    t.string   "name"
+    t.text     "name"
     t.text     "link"
     t.datetime "created_at"
     t.datetime "updated_at"
