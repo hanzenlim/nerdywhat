@@ -1,7 +1,7 @@
 class CreateHackerNews < ActiveRecord::Migration
   def self.up
     create_table :hacker_news do |t|
-      t.string :name
+      t.text :name
       t.text :link
 
       t.timestamps
