@@ -8,16 +8,21 @@ class HackerNew < ActiveRecord::Base
        #puts node.text
        if(HackerNew.exists?(i+1))
           user=HackerNew.find(i+1)
-          if(node.text.size < 255 && node.text =~ /http:/)
+          if(node.text =~ /http/)
             user.link=node.text
             user.save
+             i=i+1
+          else
+            user.link="http://news.ycombinator.com/" + node.text
+            user.save
+            i=i+1
           end
        else
           user=HackerNew.new(:link =>node.text)
           user.save
+           i=i+1
        end
 
-       i=i+1
      end
 
      i=0

@@ -45,7 +45,7 @@ $(document).ready(function(){
 		<ul>
 			<h3 id="h3">Hacker News</h3>
 		 <% size=@hacker.all.size%>
-		 <% for i in (1..16)%>
+		 <% for i in (1..size/2)%>
 		 <li>
 		 <a href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>	
 		 </li>
@@ -58,7 +58,7 @@ $(document).ready(function(){
 		<ul>
 	    <h3></h3>
 		<% size=@hacker.all.size%>
-		<% for i in (17..size-1)%>
+		<% for i in (size/2+1..size-1)%>
 		  <li>
 		  <a class="links" href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>
 		  </li>	
