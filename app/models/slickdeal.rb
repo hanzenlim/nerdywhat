@@ -32,8 +32,6 @@ class Slickdeal < ActiveRecord::Base
        end
      p=p+1
      end
-puts "this is i: " + p.to_s
-puts listExpired
 
      p=0
      i=0
@@ -47,19 +45,14 @@ puts listExpired
            user.name = user.name.gsub(/\n/, ' ')
            user.name = user.name.gsub(/\s\s*/, ' ')
            user.save
-           puts user.name  + " yyyy###"
            i=i+1
         else
            user=Slickdeal.new(:name =>node.text)
            user.save
            i=i+1
         end
-     
-     else
-       puts "helo: " + node.text  + "  world"
      end
      p=p+1 
     end
-    puts "this is p: " +p.to_s
    end
 end
