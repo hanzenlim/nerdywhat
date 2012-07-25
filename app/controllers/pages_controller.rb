@@ -9,6 +9,13 @@ class PagesController < ApplicationController
     @reddit=Child
     @hacker=HackerNew
     @hackerpic=HackerPic
+    @lifehacker=LifeHacker
+    @makeuseof=Makeuseof
+    @techcrunch=TechCrunch
+    @mashable=Mashable
+    @redditprog=RedditProgramming
+    @redmondpie=Redmondpie
+    @slickdeals=Slickdeal
   end   
 
     

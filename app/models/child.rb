@@ -1,7 +1,7 @@
 class Child < ActiveRecord::Base
   
   def self.sayHello
-   
+    puts "hello"
     i=0
     doc = Nokogiri::HTML(open("http://reddit.com"))
     doc.xpath("//div[@class='entry unvoted']/p[@class='title']/a[@class='title ']/@href").each do |node|

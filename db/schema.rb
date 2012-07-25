@@ -10,9 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111023071838) do
+ActiveRecord::Schema.define(:version => 20120724195649) do
 
   create_table "children", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diggs", :force => true do |t|
     t.text     "name"
     t.text     "link"
     t.datetime "created_at"
@@ -27,6 +34,55 @@ ActiveRecord::Schema.define(:version => 20111023071838) do
   end
 
   create_table "hacker_pics", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "life_hackers", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "makeuseofs", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mashables", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reddit_programmings", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "redmondpies", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "slickdeals", :force => true do |t|
+    t.text     "name"
+    t.text     "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tech_crunches", :force => true do |t|
     t.text     "name"
     t.text     "link"
     t.datetime "created_at"

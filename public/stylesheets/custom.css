@@ -1,10 +1,34 @@
+div.superlink{
+	color: white;
+	font-size:13px;
+	font-family: 'Crete Round', serif;
+	width: 1025px;
+	margin-left: 50px;
+}
+
+p.marge{
+	color: orange;
+	font-size:13px;
+	font-family: 'Crete Round', serif;
+	margin-left: auto;
+	margin-right: auto;
+	
+	margin: 0px auto; 
+	 width: 1025px;
+}
+
+#logo{
+	margin-top:5px;
+}
+
+
 ul li{
 	list-style: none;
     line-height: 1.2em;
     margin: .05em 0;
     padding: 0 0 0 15px;
-   // color: #FF6666;
-	//color: blue;
+    color: #FF6666;
+	color: blue;
     font-size: 15px;
 }
 
@@ -23,7 +47,7 @@ a:visited {color: #777772; text-decoration: line-through; }
 a:hover   {color:red;}
 a:active  {color:yellow;}
 
-li:before{ content: '»'; font-size: 25px; color: blue;} 
+li:before{ content: '»'; font-size: 20px; color: blue;} 
 
 
 
@@ -54,6 +78,8 @@ border-bottom:1px solid #eb7429;
 	  left:0; 
 	  z-index:2000; 
 	  width:100%;"
+	
+	
 	  
 	
 }
