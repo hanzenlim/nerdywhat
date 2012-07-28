@@ -34,6 +34,5 @@ class Mashable < ActiveRecord::Base
 
        i=i+1
    end
-
    end
 end

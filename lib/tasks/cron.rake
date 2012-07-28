@@ -13,7 +13,8 @@ task :cron => :environment do
     Mashable.generateMashable
     RedditProgramming.generateRedditProgramming
     Redmondpie.generateRedmondPie
-   Slickdeal.generateSlickdeals
+    Slickdeal.generateSlickdeals
+    Readwriteweb.generateReadwriteweb
    
    
 end

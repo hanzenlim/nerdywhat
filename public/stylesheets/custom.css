@@ -2,7 +2,7 @@ div.superlink{
 	color: white;
 	font-size:13px;
 	font-family: 'Crete Round', serif;
-	width: 1025px;
+	width: 1300px;
 	margin-left: 50px;
 }
 
@@ -32,10 +32,17 @@ ul li{
     font-size: 15px;
 }
 
-h3
-{
+h3{
 color: #a20640;
-
+}
+h3 a{
+color: #a20640;
+}
+h3 a:visited{
+color: #a20640;
+}
+h3 a:hover{
+color: #fc9453;
 }
 
 
@@ -68,8 +75,8 @@ li:nth-child(odd) { background: #CEE3F6 }
 #header
 {
 	position: relative;
-text-align: center; 	  
-border-bottom:1px solid #eb7429; 
+	text-align: center; 	  
+	border-bottom:1px solid #eb7429; 
 	  background:#fc9453;
 	  color: #a20640;
 	  padding:10px 20px;

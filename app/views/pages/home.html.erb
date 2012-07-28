@@ -16,19 +16,19 @@ $(document).ready(function(){
 			<a href="#hackernews">hackerNews | </a>
 			<a href="#reddit">reddit | </a>
 			<a href="#reddit_pics">reddit/pics | </a>
+			<a href="#reddit_prog">reddit/programming | </a>
 			<a href="#lifehacker">lifeHacker | </a>
 			<a href="#makeuseof">makeuseof | </a>
 			<a href="#techcrunch">techcrunch | </a>
-			<a href="#techcrunch">mashable | </a>
+			<a href="#techcrunch">mashable | </a>	
 			<a href="#reddit_prog">reddit/programming | </a>
 				</br>
 			<a href="#redmondpie"> redmondpie | </a>
-		
-			<a href="#techcrunch">techcrunch | </a>
-			<a href="#techcrunch">mashable | </a>
-			<a href="#reddit_prog">reddit/programming | </a>
+			<a href="#techcrunch">techcrunch | </a>	
+			<a href="#techcrunch">mashable | </a>	
 			<a href="#redmondpie"> redmondpie | </a>
 			<a href="#slickdeals"> slickdeals | </a>
+			<a href="#readwriteweb"> readwriteweb | </a>
 		</div>
 	</div>
 <br/>
@@ -43,7 +43,7 @@ $(document).ready(function(){
 		<a name="hackernews" />
 		<br/>
 		<ul>
-			<h3 id="h3">Hacker News</h3>
+			<h3 id="h3"><a href="http://news.ycombinator.com/">Hacker News</a></h3>
 		 <% size=@hacker.all.size%>
 		 <% for i in (1..size/2)%>
 		 <li>
@@ -58,7 +58,7 @@ $(document).ready(function(){
 		<ul>
 	    <h3></h3>
 		<% size=@hacker.all.size%>
-		<% for i in (size/2+1..size-1)%>
+		<% for i in (size/2+1..size)%>
 		  <li>
 		  <a class="links" href="<%= @hacker.find(i).link %>"> :: <%= @hacker.find(i).name  %></a>
 		  </li>	
@@ -75,7 +75,7 @@ $(document).ready(function(){
 	<a name="reddit" />
 	<br/>
 	<ul>
-		<h3 id="h3">reddit</h3>
+		<h3 id="h3"><a href="http://www.reddit.com">reddit</a></h3>
 	 <% size=@reddit.all.size%>
 	 <% for i in (11..23)%>
 	 <li>
@@ -107,7 +107,7 @@ $(document).ready(function(){
 	<a name="reddit_pics" />
 	<br/>
 	<ul>
-		<h3 id="h3">reddit/pics</a></h3>
+		<h3 id="h3"><a href="http://www.reddit.com/r/pics">reddit/pics</a></h3>
 	 <% size=@hackerpic.all.size%>
 	 <% for i in (1..13)%>
 	 <li>
@@ -132,6 +132,40 @@ $(document).ready(function(){
 <div class="row-end">&nbsp;</div>
 </div>
 
+
+<!-- another new section -->
+<!-- reddit programming -->
+<div class="row">
+	<div class="col6">
+	<a name="reddit_prog" />
+	<br/>
+	<ul>
+		<h3 id="h3"><a href="http://www.reddit.com/r/programming">reddit/programming</a></h3>
+	 <% size=@redditprog.all.size%>
+	 <% for i in (1..13)%>
+	 <li>
+	 <a href="<%= @redditprog.find(i).link %>"> :: <%= @redditprog.find(i).name  %></a>	
+	 </li>
+	 <% end %>
+	</ul>
+	</div>
+	
+	<div class="col6">
+	<br/><br/><br/>
+	<ul>
+    <h3></h3>
+	<% size=@redditprog.all.size%>
+	<% for i in (14..size)%>
+	  <li>
+	  <a class="links" href="<%= @redditprog.find(i).link %>"> :: <%= @redditprog.find(i).name  %></a>
+	  </li>	
+	<% end %>
+	</ul>		
+	</div>
+<div class="row-end">&nbsp;</div>
+</div>
+
+
 <!-- another new section -->
 <!-- lifehacker section -->
 <div class="row">
@@ -139,7 +173,7 @@ $(document).ready(function(){
 	<a name="lifehacker" />
 	<br/>
 	<ul>
-		<h3 id="h3">LifeHacker</a></h3>
+		<h3 id="h3"><a href="http://www.lifehacker.com">lifehacker</a></h3>
 	 <% size=@lifehacker.all.size%>
 	 <% for i in (1..size/2)%>
 	 <li>
@@ -171,7 +205,7 @@ $(document).ready(function(){
 	<a name="makeuseof" />
 	<br/>
 	<ul>
-		<h3 id="h3">makeuseof</a></h3>
+		<h3 id="h3"><a href="http://www.makeuseof.com">makeuseof</a></h3>
 	 <% size=@makeuseof.all.size%>
 	 <% for i in (1..size/2)%>
 	 <li>
@@ -203,7 +237,7 @@ $(document).ready(function(){
 	<a name="techcrunch" />
 	<br/>
 	<ul>
-		<h3 id="h3">techcrunch</a></h3>
+		<h3 id="h3"><a href="http://www.techcrunch.com">techcrunch</a></h3>
 	 <% size=@techcrunch.all.size%>
 	 <% for i in (1..size/2)%>
 	 <li>
@@ -236,7 +270,7 @@ $(document).ready(function(){
 	<a name="mashable" />
 	<br/>
 	<ul>
-		<h3 id="h3">mashable</a></h3>
+		<h3 id="h3"><a href="http://www.mashable.com">mashable</a></h3>
 	 <% size=@mashable.all.size%>
 	 <% for i in (1..size/2)%>
 	 <li>
@@ -261,37 +295,6 @@ $(document).ready(function(){
 <div class="row-end">&nbsp;</div>
 </div>
 
-<!-- another new section -->
-<!-- reddit programming -->
-<div class="row">
-	<div class="col6">
-	<a name="reddit_prog" />
-	<br/>
-	<ul>
-		<h3 id="h3">reddit/programming</a></h3>
-	 <% size=@redditprog.all.size%>
-	 <% for i in (1..13)%>
-	 <li>
-	 <a href="<%= @redditprog.find(i).link %>"> :: <%= @redditprog.find(i).name  %></a>	
-	 </li>
-	 <% end %>
-	</ul>
-	</div>
-	
-	<div class="col6">
-	<br/><br/><br/>
-	<ul>
-    <h3></h3>
-	<% size=@redditprog.all.size%>
-	<% for i in (14..size)%>
-	  <li>
-	  <a class="links" href="<%= @redditprog.find(i).link %>"> :: <%= @redditprog.find(i).name  %></a>
-	  </li>	
-	<% end %>
-	</ul>		
-	</div>
-<div class="row-end">&nbsp;</div>
-</div>
 
 <!-- another new section -->
 <!-- redmondpie programming -->
@@ -300,7 +303,7 @@ $(document).ready(function(){
 	<a name="redmondpie" />
 	<br/>
 	<ul>
-		<h3 id="h3">redmondpie</a></h3>
+		<h3 id="h3"><a href="http://www.redmondpie.com">redmondpie</a></h3>
 	 <% size=@redmondpie.all.size%>
 	 <% for i in (1..size/2)%>
 	 <li>
@@ -333,9 +336,9 @@ $(document).ready(function(){
 	<a name="slickdeals" />
 	<br/>
 	<ul>
-		<h3 id="h3">slickdeals</a></h3>
+		<h3 id="h3"><a href="http://www.slickdeals.net">slickdeals</a></h3>
 	 <% size=@slickdeals.all.size%>
-	 <% for i in (1..size/2)%>
+	 <% for i in (1..15)%>
 	 <li>
 	 <a href="<%= @slickdeals.find(i).link %>"> :: <%= @slickdeals.find(i).name  %></a>	
 	 </li>
@@ -348,7 +351,7 @@ $(document).ready(function(){
 	<ul>
     <h3></h3>
 	<% size=@slickdeals.all.size%>
-	<% for i in (size/2+1..size)%>
+	<% for i in (16..30)%>
 	  <li>
 	  <a class="links" href="<%= @slickdeals.find(i).link %>"> :: <%= @slickdeals.find(i).name  %></a>
 	  </li>	
@@ -357,6 +360,39 @@ $(document).ready(function(){
 	</div>
 <div class="row-end">&nbsp;</div>
 </div>
+
+<!-- another new section -->
+<!-- readwriteweb -->
+<div class="row">
+	<div class="col6">
+	<a name="readwriteweb" />
+	<br/>
+	<ul>
+		<h3 id="h3"><a href="http://www.readwriteweb.com">readwriteweb</a></h3>
+	 <% size=@readwriteweb.all.size%>
+	 <% for i in (1..size/2)%>
+	 <li>
+	 <a href="<%= @readwriteweb.find(i).link %>"> :: <%= @readwriteweb.find(i).name  %></a>	
+	 </li>
+	 <% end %>
+	</ul>
+	</div>
+	
+	<div class="col6">
+	<br/><br/><br/>
+	<ul>
+    <h3></h3>
+	<% size=@readwriteweb.all.size%>
+	<% for i in (size/2+1..size)%>
+	  <li>
+	  <a class="links" href="<%= @readwriteweb.find(i).link %>"> :: <%= @readwriteweb.find(i).name  %></a>
+	  </li>	
+	<% end %>
+	</ul>		
+	</div>
+<div class="row-end">&nbsp;</div>
+</div>
+
 
 
 

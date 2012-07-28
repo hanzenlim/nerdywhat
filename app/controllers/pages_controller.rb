@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     @redditprog=RedditProgramming
     @redmondpie=Redmondpie
     @slickdeals=Slickdeal
+    @readwriteweb=Readwriteweb
   end   
 
     
