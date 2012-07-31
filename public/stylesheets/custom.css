@@ -85,9 +85,16 @@ li:nth-child(odd) { background: #CEE3F6 }
 	  left:0; 
 	  z-index:2000; 
 	  width:100%;"
-	
-	
+	-webkit-box-shadow: 0 8px 6px -6px #ccc;
+		   -moz-box-shadow: 0 8px 6px -6px #ccc;
+		        box-shadow: 0 8px 6px -6px #ccc;
 	  
 	
+}
+
+.shadow {
+  -moz-box-shadow:    2px 2px 4px 5px #ccc;
+  -webkit-box-shadow: 0.5px 0.5px 3px 4px #ccc;
+  box-shadow:         0.5px 0.5px 1px 2px #ccc;
 }
 
