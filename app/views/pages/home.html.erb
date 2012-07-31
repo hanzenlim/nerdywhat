@@ -18,24 +18,21 @@ $(document).ready(function(){
 			<a href="#reddit_pics">reddit/pics | </a>
 			<a href="#reddit_prog">reddit/programming | </a>
 			<a href="#lifehacker">lifeHacker | </a>
-			<a href="#makeuseof">makeuseof | </a>
 			<a href="#techcrunch">techcrunch | </a>
-			<a href="#techcrunch">mashable | </a>	
+			<a href="#mashable">mashable | </a>
+			<a href="#makeuseof">makeuseof | </a>	
 				</br>
 			<a href="#reddit_prog">reddit/programming | </a>
 			
 			<a href="#redmondpie"> redmondpie | </a>
 			<a href="#techcrunch">techcrunch | </a>	
-			<a href="#techcrunch">mashable | </a>	
+				
 			<a href="#redmondpie"> redmondpie | </a>
 			<a href="#slickdeals"> slickdeals | </a>
 			<a href="#readwriteweb"> readwriteweb | </a>
 		</div>
 	</div>
 <br/>
-
-
-
 
 <div class="layout-978">
 	
@@ -68,7 +65,6 @@ $(document).ready(function(){
 		</div>
 	<div class="row-end">&nbsp;</div>
 	</div>		
-	
 	
 <!-- another new section -->	
 <div class="row">
@@ -108,7 +104,7 @@ $(document).ready(function(){
 	<a name="reddit_pics" />
 	<br/>
 	<ul>
-		<h3 id="h3"><img src="/images/reddit.jpg" alt="Smiley face" height="17" width="17" /><a href="http://www.reddit.com/r/pics">  reddit/pics</a></h3>
+		<h3 id="h3"><img src="/images/reddit.jpg" alt="Smiley face" height="17" width="17" /><a href="http://www.reddit.com/r/pics">&nbsp;reddit/pics</a></h3>
 	 <% size=@hackerpic.all.size%>
 	 <% for i in (1..13)%>
 	 <li>
@@ -199,37 +195,7 @@ $(document).ready(function(){
 <div class="row-end">&nbsp;</div>
 </div>
 
-<!-- another new section -->
-<!-- makeuseof section -->
-<div class="row">
-	<div class="col6">
-	<a name="makeuseof" />
-	<br/>
-	<ul>
-		<h3 id="h3"><img src="/images/makeuseof.jpg" alt="Smiley face" height="18" width="18" /><a href="http://www.makeuseof.com">&nbsp; makeuseof</a></h3>
-	 <% size=@makeuseof.all.size%>
-	 <% for i in (1..size/2)%>
-	 <li>
-	 <a href="<%= @makeuseof.find(i).link %>"> :: <%= @makeuseof.find(i).name  %></a>	
-	 </li>
-	 <% end %>
-	</ul>
-	</div>
-	
-	<div class="col6">
-	<br/><br/><br/>
-	<ul>
-    <h3></h3>
-	<% size=@makeuseof.all.size%>
-	<% for i in (size/2+1..size)%>
-	  <li>
-	  <a class="links" href="<%= @makeuseof.find(i).link %>"> :: <%= @makeuseof.find(i).name  %></a>
-	  </li>	
-	<% end %>
-	</ul>		
-	</div>
-<div class="row-end">&nbsp;</div>
-</div>
+
 
 <!-- another new section -->
 <!-- techcrunch section -->
@@ -289,6 +255,38 @@ $(document).ready(function(){
 	<% for i in (size/2+1..size)%>
 	  <li>
 	  <a class="links" href="<%= @mashable.find(i).link %>"> :: <%= @mashable.find(i).name  %></a>
+	  </li>	
+	<% end %>
+	</ul>		
+	</div>
+<div class="row-end">&nbsp;</div>
+</div>
+
+<!-- another new section -->
+<!-- makeuseof section -->
+<div class="row">
+	<div class="col6">
+	<a name="makeuseof" />
+	<br/>
+	<ul>
+		<h3 id="h3"><img src="/images/makeuseof.jpg" alt="Smiley face" height="18" width="18" /><a href="http://www.makeuseof.com">&nbsp; makeuseof</a></h3>
+	 <% size=@makeuseof.all.size%>
+	 <% for i in (1..size/2)%>
+	 <li>
+	 <a href="<%= @makeuseof.find(i).link %>"> :: <%= @makeuseof.find(i).name  %></a>	
+	 </li>
+	 <% end %>
+	</ul>
+	</div>
+	
+	<div class="col6">
+	<br/><br/><br/>
+	<ul>
+    <h3></h3>
+	<% size=@makeuseof.all.size%>
+	<% for i in (size/2+1..size)%>
+	  <li>
+	  <a class="links" href="<%= @makeuseof.find(i).link %>"> :: <%= @makeuseof.find(i).name  %></a>
 	  </li>	
 	<% end %>
 	</ul>		
